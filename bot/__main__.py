@@ -5,6 +5,7 @@ from bot.helper.utils import add_task
 video_mimetype = [
   "video/x-flv",
   "video/mp4",
+  "video/mkv",
   "application/x-mpegURL",
   "video/MP2T",
   "video/3gpp",
