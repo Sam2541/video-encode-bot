@@ -37,7 +37,7 @@ def encode(filepath):
     else:
         # Transcode to h265 / hvc1
         #video_opts = '-c:v libx265 -crf 28 -tag:v hvc1 -preset fast -threads 8'
-        video_opts = '-c:v libx265 -preset fast -pix_fmt yuv420p10le -x265-params limit-sao:bframes=8:psy-rd=1:aq-mode=3 -profile main10 -output-depth 10 -crf 26 -threads 8'
+        video_opts = '-c:v libx265 -crf 26 -profile main10 -threads 8 -preset fast -pix_fmt yuv420p10le -x265-params limit-sao:bframes=8:psy-rd=1:aq-mode=3'
     # Get the audio channel codec
     audio_codec = get_codec(filepath, channel='a:0')
     if audio_codec == []:
