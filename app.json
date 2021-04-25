@@ -1,0 +1,40 @@
+{
+  "name": "VideoCompressBot",
+  "description": "Telegram's best Video Compress Bot",
+  "logo": "https://telegra.ph/file/b687febf32e4d583fb1d4.jpg",
+  "keywords": [
+    "telegram",
+    "best",
+    "video",
+    "compress",
+    "bot"
+  ],
+  "repository": "https://github.com/xVoldx/video-encoder-bot",
+  "env": {
+    "APP_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your bot token, as a string. Get this from @BotFather",
+      "value": "",
+      "required": true
+    },
+    "SUDO_USERS": {
+      "description": "Allow only pre-defined users to use this bot as Sudo User. Separate with Space. Just for using Admin Commands.",
+      "value": "1256157065 ",
+      "required": true
+    },
+    "DOWNLOAD_DIR": {
+      "description": "Download directory where to download files. Must ends with forward slash > / <",
+      "required": true
+    }
+  },
+  "stack": "container"
+}
