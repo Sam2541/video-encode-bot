@@ -15,7 +15,7 @@ def get_codec(filepath, channel='v:0'):
 
 def encode(filepath):
     basefilepath, extension = os.path.splitext(filepath)
-    output_filepath = basefilepath + '[ 1080p HEVC ]' + '.mkv'
+    output_filepath = basefilepath + ' [ 1080p HEVC ]' + '.mkv'
     assert(output_filepath != filepath)
     if os.path.isfile(output_filepath):
         print('Skipping "{}": file already exists'.format(output_filepath))
@@ -37,7 +37,7 @@ def encode(filepath):
     else:
         # Transcode to h265 / hvc1
         #video_opts = '-c:v libx265 -crf 28 -tag:v hvc1 -preset fast -threads 8'
-        video_opts = '-c:v libx265 -map 0 -crf 26 -profile:v main10 -threads 8 -preset slow -pix_fmt yuv420p10le'
+        video_opts = '-c:v libx265 -map 0 -crf 26 -profile:v main10 -threads 8 -preset fast -pix_fmt yuv420p10le'
     # Get the audio channel codec
     audio_codec = get_codec(filepath, channel='a:0')
     if audio_codec == []:
